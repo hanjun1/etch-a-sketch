@@ -2,8 +2,18 @@
     border: 1px solid black;
 }
 
-.square-fill-blue {
+.square-fill-default {
     background-color: blue;
+}
+
+#button-container {
+    display: flex;
+    flex-direction: row;
+}
+
+#color-picker {
+    width: 20px;
+    height: 20px;
 }
 
 #main-container {
