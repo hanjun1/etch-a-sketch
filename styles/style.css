@@ -11,6 +11,24 @@
     flex-direction: row;
 }
 
+.btn-not-pressed {
+    width: auto;
+    height: 38px;
+    background-color: white;
+    color: rgb(72, 84, 197);
+    border-radius: 5px;
+    text-align: center;
+}
+
+.btn-pressed {
+    width: auto;
+    height: 38px;
+    background-color: rgb(72, 84, 197);
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+}
+
 #color-picker {
     width: 20px;
     height: 20px;
