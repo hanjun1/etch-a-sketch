@@ -107,10 +107,8 @@ function main(gridSize) {
         } else if (backgroundColor === "choose-color") {
             e.target.style.backgroundColor = document.getElementById("color-picker").value;
         } else if (backgroundColor === "grayscale") {
-            console.log(e.target.style.backgroundColor.match(/rgba/));
             if (e.target.style.backgroundColor.match(/rgba/)) {
                 let currentGrayscale = parseFloat(e.target.style.backgroundColor.slice(-4,-1));
-                console.log(currentGrayscale);
                 if (currentGrayscale < 1.0) {
                     e.target.style.backgroundColor = `rgba(0,0,0,${currentGrayscale+0.1})`;
                 }
