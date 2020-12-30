@@ -117,7 +117,7 @@ function main(gridSize) {
         } else if (backgroundColor === "grayscale") {
             if (e.target.style.backgroundColor.match(/rgba/)) {
                 let currentGrayscale = parseFloat(e.target.style.backgroundColor.slice(-4,-1));
-                if (currentGrayscale < 1.0) {
+                if (currentGrayscale < 0.9) {
                     e.target.style.backgroundColor = `rgba(0,0,0,${currentGrayscale+0.1})`;
                 }
             } else {
