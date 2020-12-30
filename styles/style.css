@@ -1,15 +1,17 @@
+/* 
+CSS TABLE OF CONTENTS:
+
+1.0 - GENERAL STYLES
+2.0 - HEADER
+3.0 - MAIN
+    3.1 - BUTTON CONTAINER
+    3.2 - MAIN CONTAINER
+*/
+
+/* 1.0 - GENERAL STYLES */
 html {
     font-family: 'Indie Flower', cursive;
     background-image: url("../images/double-bubble-outline.png");
-}
-
-#header {
-    height: auto;
-    width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 8%;
-    margin-bottom: 30px;
 }
 
 h1 {
@@ -17,14 +19,26 @@ h1 {
     text-emphasis: bold;
 }
 
-.square {
-    border: 1px solid rgba(0, 0, 0, 0.062);
+button {
+    font-family: 'Indie Flower', cursive;
+    font-size: 20px;
+    text-align: baseline;
 }
 
-.square-fill-default {
-    background-color: blue;
+/* 2.0 - HEADER */
+
+#header {
+    height: auto;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    margin-bottom: 30px;
 }
 
+/* 3.0 - MAIN */
+
+/* 3.1 BUTTON CONTAINER */
 #button-container {
     display: flex;
     flex-direction: row;
@@ -53,15 +67,14 @@ h1 {
     text-align: center;
 }
 
-button {
-    font-family: 'Indie Flower', cursive;
-    font-size: 20px;
-    text-align: baseline;
-}
-
 #color-picker {
     width: 20px;
     height: 20px;
+}
+
+/* 3.2 - MAIN CONTAINER */
+.square {
+    border: 1px solid rgba(0, 0, 0, 0.062);
 }
 
 #main-container {

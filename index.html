@@ -5,33 +5,35 @@
         <link rel="stylesheet" href="styles/reset.css" />
         <link rel="stylesheet" href="styles/style.css" />
         <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
     </head>
     <body>
         <header id="header">
             <h1>Etch-A-Sketch</h1>
         </header>
-        <div id="button-container">
-            <div id="reset-container" class="container">
-                <button id="reset" type="button" class="btn-not-pressed">Reset</button>
+        <main>
+            <div id="button-container">
+                <div id="reset-container" class="container">
+                    <button id="reset" type="button" class="btn-not-pressed">Reset</button>
+                </div>
+                <div id="default-container" class="container">
+                    <button id="default" type="button" class="btn-not-pressed">Default</button>
+                </div>
+                <div id="grayscale-container" class="container">
+                    <button id="grayscale" type="button" class="btn-not-pressed">Grayscale</button>
+                </div>
+                <div id="rgb-color-container" class="container">
+                    <button id="rgb-color" type="button" class="btn-not-pressed">Random Colors</button>
+                </div>
+                <div id="choose-color-container" class="container">
+                    <button id="choose-color" ype="button" class="btn-not-pressed">
+                        <label>Choose a color: </label>
+                        <input id="color-picker" type="color" value="#FFFFFF" placeholder="Choose Color">
+                    </button>
+                </div>
             </div>
-            <div id="default-container" class="container">
-                <button id="default" type="button" class="btn-not-pressed">Default</button>
-            </div>
-            <div id="grayscale-container" class="container">
-                <button id="grayscale" type="button" class="btn-not-pressed">Grayscale</button>
-            </div>
-            <div id="rgb-color-container" class="container">
-                <button id="rgb-color" type="button" class="btn-not-pressed">Random Colors</button>
-            </div>
-            <div id="choose-color-container" class="container">
-                <button id="choose-color" ype="button" class="btn-not-pressed">
-                    <label>Choose a color: </label>
-                    <input id="color-picker" type="color" value="#FFFFFF" placeholder="Choose Color">
-                </button>
-            </div>
-        </div>
-        <div id="main-container"></div>
-        <script src="scipts/script.js"></script>
+            <div id="main-container"></div>
+            <script src="scipts/script.js"></script>
+        </main>
     </body>
 </html>

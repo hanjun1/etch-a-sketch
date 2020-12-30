@@ -1,5 +1,7 @@
 const mainContainer = document.querySelector("#main-container");
 const allButtons = document.querySelectorAll("button");
+
+// default parameters for grid
 let gridSize = 16;
 let backgroundColor = 'default';
 
@@ -12,6 +14,17 @@ function createGrid(n) {
     }
 }
 
+//ensures all buttons are in their 'not-pressed' state
+function clearButtons() {
+    allButtons.forEach((button) => {
+      if (button.classList.contains("btn-pressed")) {
+        button.classList.remove("btn-pressed");
+        button.classList.add("btn-not-pressed");
+      }
+    })
+}
+
+// resets grid and size of grid
 function reset(e) {
     while (true) {
         let gridSize = parseInt(prompt("Enter the grid size (n) you want: (n x n) (Maximum n value is 100)"));
@@ -31,31 +44,9 @@ function reset(e) {
     }
     
 } 
-
 const resetButton = document.querySelector("#reset");
 resetButton.addEventListener('click', reset);
 
-function changeGrayscale(e) {
-    clearButtons();
-    grayscaleButton.classList.add("btn-pressed");
-    backgroundColor = "grayscale";
-}
-
-const grayscaleButton = document.querySelector("#grayscale");
-grayscaleButton.addEventListener('click', changeGrayscale);
-
-function randomNumberRGB() {
-    return Math.floor(Math.random() * 255);
-}
-
-function changeColorRandom(e) {
-    clearButtons();
-    randomColorButton.classList.add("btn-pressed");
-    backgroundColor = "rgb";
-}
-
-const randomColorButton = document.querySelector("#rgb-color");
-randomColorButton.addEventListener('click', changeColorRandom);
 
 function defaultColor() {
     clearButtons();
@@ -66,6 +57,31 @@ function defaultColor() {
 const defaultButton = document.querySelector("#default");
 defaultButton.addEventListener('click', defaultColor);
 
+
+//change to grayscale coloring mode
+function changeGrayscale(e) {
+    clearButtons();
+    grayscaleButton.classList.add("btn-pressed");
+    backgroundColor = "grayscale";
+}
+
+const grayscaleButton = document.querySelector("#grayscale");
+grayscaleButton.addEventListener('click', changeGrayscale);
+
+function changeColorRandom(e) {
+    clearButtons();
+    randomColorButton.classList.add("btn-pressed");
+    backgroundColor = "rgb";
+}
+
+const randomColorButton = document.querySelector("#rgb-color");
+randomColorButton.addEventListener('click', changeColorRandom);
+
+function randomNumberRGB() {
+    return Math.floor(Math.random() * 255);
+}
+
+//choose random color from rgb css property
 function rgbColor() {
     let randomR = randomNumberRGB();
     let randomG = randomNumberRGB();
@@ -74,6 +90,7 @@ function rgbColor() {
     return `rgb(${randomR}, ${randomG}, ${randomB})`;
 }
 
+//choose color of user's choice
 function chooseColor(e) {
     clearButtons();
     colorChooseButton.classList.add("btn-pressed");
@@ -82,15 +99,6 @@ function chooseColor(e) {
 
 const colorChooseButton = document.querySelector("#choose-color");
 colorChooseButton.addEventListener('click', chooseColor);
-
-function clearButtons() {
-    allButtons.forEach((button) => {
-      if (button.classList.contains("btn-pressed")) {
-        button.classList.remove("btn-pressed");
-        button.classList.add("btn-not-pressed");
-      }
-    })
-}
 
 function main(gridSize) {
 
