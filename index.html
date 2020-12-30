@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="styles/reset.css" />
+        <link rel="stylesheet" href="styles/style.css" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    </head>
+    <body>
+        <div id="button-container">
+            <div id="reset-container">
+                <button id="reset" type="button" class="btn btn-outline-primary">Reset</button>
+            </div>
+            <div id="default-container">
+                <button id="default" type="button" class="btn btn-outline-primary">Default</button>
+            </div>
+            <div id="rgb-color-container">
+                <button id="rgb-color" type="button" class="btn btn-outline-primary">Random Colors</button>
+            </div>
+            <div id="choose-color-container">
+                <button id="choose-color" ype="button" class="btn btn-outline-primary">
+                    <label>Choose a color: </label>
+                    <input id="color-picker" type="color" value="#FFFFFF" placeholder="Choose Color">
+                </button>
+            </div>
+        </div>
+        <div id="main-container"></div>
+        <script src="scipts/script.js"></script>
+    </body>
+</html>
